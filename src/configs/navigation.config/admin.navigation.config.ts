@@ -1,0 +1,192 @@
+import { DASHBOARDS_PREFIX_PATH } from '@/constants/route.constant'
+import {
+    NAV_ITEM_TYPE_TITLE,
+    NAV_ITEM_TYPE_ITEM,
+} from '@/constants/navigation.constant'
+import { ADMIN, USER } from '@/constants/roles.constant'
+import type { NavigationTree } from '@/@types/navigation'
+import { APP_BASE_ROUTE, vite_app_routes } from '@/router/vite-app-routes'
+import { MODULE_KEYS } from '@/constants/security-module.constatnt'
+
+const adminNavigationConfig: NavigationTree[] = [
+    {
+        key: 'admin',
+        path: '',
+        title: 'Admin',
+        translateKey: 'Website',
+        icon: 'dashboard',
+        type: NAV_ITEM_TYPE_TITLE,
+        modules: [],
+        allowFullAccess: true,
+        authority: [ADMIN],
+        meta: {
+            horizontalMenu: {
+                layout: 'default',
+            },
+        },
+        subMenu: [
+            {
+                key: 'dashboard.property',
+                path: `${APP_BASE_ROUTE['app']}${DASHBOARDS_PREFIX_PATH}/property`,
+                title: 'Properties',
+                translateKey: 'nav.dashboard.property',
+                icon: 'property',
+                modules: [MODULE_KEYS.PROPERTY_DETAILS],
+                type: NAV_ITEM_TYPE_ITEM,
+                authority: [ADMIN, USER],
+                subMenu: [],
+            },
+            {
+                key: 'admin.enquiry',
+                path: vite_app_routes.app.admin.enquiry,
+                title: 'List Your Property Leads',
+                translateKey: 'nav.admin.enquiry',
+                icon: 'enquiry',
+                modules: [MODULE_KEYS.ROOM_REVIEW],
+                type: NAV_ITEM_TYPE_ITEM,
+                authority: [ADMIN, USER],
+                subMenu: [],
+            },
+        ],
+    },
+    {
+        key: 'admin',
+        path: '',
+        title: 'Admin',
+        translateKey: 'Reports',
+        icon: 'dashboard',
+        type: NAV_ITEM_TYPE_TITLE,
+        modules: [],
+        allowFullAccess: true,
+        authority: [ADMIN],
+        meta: {
+            horizontalMenu: {
+                layout: 'default',
+            },
+        },
+        subMenu: [
+
+            {
+                key: 'admin.booking',
+                path: vite_app_routes.app.admin.booking,
+                title: 'Bookings',
+                translateKey: 'nav.admin.booking',
+                icon: 'calendar',
+                modules: [MODULE_KEYS.LATEST_BOOKING],
+                type: NAV_ITEM_TYPE_ITEM,
+                authority: [ADMIN, USER],
+                subMenu: [],
+            },
+            {
+                key: 'admin.referral',
+                path: vite_app_routes.app.admin.referral,
+                title: 'Referral',
+                translateKey: 'nav.admin.referral',
+                icon: 'enquiry',
+                modules: [MODULE_KEYS.ROOM_REVIEW],
+                type: NAV_ITEM_TYPE_ITEM,
+                authority: [ADMIN, USER],
+                subMenu: [],
+            },
+        ],
+    },
+    {
+        key: 'admin',
+        path: '',
+        title: 'Admin',
+        translateKey: 'admin',
+        icon: 'dashboard',
+        type: NAV_ITEM_TYPE_TITLE,
+        modules: [],
+        allowFullAccess: true,
+        authority: [ADMIN],
+        meta: {
+            horizontalMenu: {
+                layout: 'default',
+            },
+        },
+        subMenu: [
+            {
+                key: 'admin.vouchers',
+                path: vite_app_routes.app.admin.vouchers,
+                title: 'Promo Codes',
+                translateKey: 'nav.admin.vouchers',
+                icon: 'promocode',
+                modules: [MODULE_KEYS.PROMO_CODES],
+                type: NAV_ITEM_TYPE_ITEM,
+                authority: [ADMIN, USER],
+                subMenu: [],
+            },
+            // {
+            //     key: 'admin.inventory',
+            //     path: vite_app_routes.app.admin.inventory,
+            //     title: 'Inventory',
+            //     translateKey: 'nav.admin.inventory',
+            //     icon: 'inventory',
+            //     modules: [MODULE_KEYS.INVENTORY],
+            //     type: NAV_ITEM_TYPE_ITEM,
+            //     authority: [ADMIN, USER],
+            //     subMenu: [],
+            // },
+            {
+                key: 'admin.areas',
+                path: vite_app_routes.app.admin.areas,
+                title: 'Areas',
+                translateKey: 'nav.admin.areas',
+                icon: 'map',
+                modules: [MODULE_KEYS.PROPERTY_AREA],
+                type: NAV_ITEM_TYPE_ITEM,
+                authority: [ADMIN, USER],
+                subMenu: [],
+            },
+            {
+                key: 'admin.formula_mapping',
+                path: vite_app_routes.app.admin.formula_mapping,
+                title: 'Formula Mapping',
+                translateKey: 'nav.admin.formula_mapping',
+                icon: 'formula',
+                modules: [MODULE_KEYS.FORMULA_MAPPING],
+                type: NAV_ITEM_TYPE_ITEM,
+                authority: [ADMIN, USER],
+                subMenu: [],
+                allowFullAccess: true,
+            },
+            {
+                key: 'admin.security.root',
+                path: vite_app_routes.app.admin.security.root,
+                title: 'Security',
+                translateKey: 'nav.admin.security.root',
+                icon: 'securtiy',
+                modules: [MODULE_KEYS.SECURITY_ROLE],
+                type: NAV_ITEM_TYPE_ITEM,
+                authority: [ADMIN, USER],
+                subMenu: [],
+            },
+            {
+                key: 'admin.security.role_groups',
+                path: vite_app_routes.app.admin.security.role_groups,
+                title: 'Role Groups',
+                translateKey: 'nav.admin.security.role_groups',
+                icon: 'roleGroups',
+                modules: [MODULE_KEYS.ROLE_GROUP],
+                type: NAV_ITEM_TYPE_ITEM,
+                authority: [ADMIN, USER],
+                subMenu: [],
+            },
+            {
+                key: 'admin.users',
+                path: vite_app_routes.app.admin.users,
+                title: 'Users',
+                translateKey: 'nav.admin.users',
+                icon: 'account',
+                modules: [MODULE_KEYS.USERS],
+                type: NAV_ITEM_TYPE_ITEM,
+                authority: [ADMIN, USER],
+                subMenu: [],
+            },
+
+        ],
+    },
+]
+
+export default adminNavigationConfig

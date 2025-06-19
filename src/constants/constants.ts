@@ -1,0 +1,275 @@
+import { ICheckboxSelection } from '@/components/common/multiple-checkbox-section'
+
+interface ISelecOption {
+    label: string
+    value: string
+}
+
+export const amenities = ['Free Wifi', 'Free Breakfast', 'Dessert']
+export const foodDinning = [
+    'Food 1 with amazing dinning',
+    'Candle light dinner with wife',
+    'Food 3',
+]
+export const propertyPolicy = ['Policy 1', 'Policy 2', 'Policy 3']
+
+export const formMessages = {
+    required: 'This field is required',
+}
+
+export const propertyType: ISelecOption[] = [
+    { label: 'Hotel', value: 'HOTEL' },
+    { label: 'Ressort', value: 'RESSORT' },
+    { label: 'Aparment', value: 'APARTMENT' },
+    { label: 'Service Apartment', value: 'servicedApartment' },
+    { label: 'Apartment', value: 'apartment' },
+]
+
+export const status: ISelecOption[] = [
+    { label: 'Active', value: 'ACTIVE' },
+    { label: 'Inactive', value: 'INACTIVE' },
+]
+
+export const property_amenities = [
+    'LIVING_ROOM',
+    'FIREPLACE',
+    'WOOD_STOVE',
+    'HEATING',
+    'AIR_CONDITIONING',
+    'CEILING_FAN',
+    'ELEVATOR',
+    'DOORBELL',
+    'TELEPHONE',
+    'BATHROBE',
+    'HAIR_DRYER',
+    'SLIPPERS',
+    'HANGERS',
+    'IRON_BOARD',
+    'LINENS',
+    'SHAMPOO',
+    'TOILETRIES',
+    'TOWELS',
+    'DRYER',
+    'WASHER',
+    'BALCONY',
+    'DECK_PATIO_UNCOVERED',
+    'LANAI_GAZEBO_COVERED',
+    'GARDEN',
+    'GRILL',
+    'GAME_ROOM',
+    'SITTING_AREA',
+    'VERANDA',
+    'ROOF_TERRACE',
+    'PRIVATE_YARD',
+    'GARAGE',
+    'PARKING_INCLUDED',
+    'PARKING_POSSIBLE',
+    'PARKING_PAID',
+    'PRIVATE_ENTRANCE',
+    'SAFE',
+    'LOCKERS',
+    'FIRE_EXTINGUISHER',
+    'FIRST_AID_KIT',
+    'SMOKE_DETECTOR',
+    'CO_DETECTOR',
+    'SAFETY_CARD',
+    'LOCK_BEDROOM',
+    'BUSINESS_CENTER',
+    'DESK',
+    'LAPTOP_FRIENDLY',
+    'BOOKS',
+    'DVD',
+    'FOOSBALL',
+    'GAMES',
+    'MUSIC_LIBRARY',
+    'TABLE_TENNIS',
+    'POOL_TABLE',
+    'CABLE',
+    'SATELLITE',
+    'STEREO',
+    'TV',
+    'TOYS',
+    'VIDEO_GAMES',
+    'VIDEO_LIBRARY',
+    'VIDEO_ON_DEMAND',
+    'INTERNET',
+    'WIFI',
+    'KITCHEN',
+    'FREEZER',
+    'REFRIGERATOR',
+    'DINING_AREA',
+    'HIGHCHAIR',
+    'DINING_ROOM',
+    'KETTLE',
+    'SPICES',
+    'COFFEE_MAKER',
+    'MICROWAVE',
+    'STOVE',
+    'DISHES_UTENSILS',
+    'OVEN',
+    'TOASTER',
+    'DISHWASHER',
+    'BEACH',
+    'MOUNTAIN_VIEW',
+    'OCEAN_VIEW',
+    'POOL',
+    'HOT_TUB',
+    'GYM',
+    'PETS_NOT_ALLOWED',
+    'PETS_CONSIDERED',
+    'POOL_CHILDREN',
+    'MASSAGE',
+    'SAUNA',
+    'POOL_HEATED',
+    'POOL_INDOOR',
+    'POOL_PRIVATE',
+    'AIRPORT_SHUTTLE',
+    'CLEANING_POSSIBLE',
+    'SHOP',
+    'BAGGAGE_STORAGE',
+    'CONCIERGE',
+    'BAR',
+    'DOORMAN',
+    'CAR_AVAILABLE',
+    'RECEPTION',
+    'CHAUFFEUR',
+    'RECEPTION_24_HOUR',
+    'CLEANING_INCLUDED',
+    'STAFF',
+    'BASKETBALL_COURT',
+    'FISHING',
+    'HUNTING',
+    'MOUNTAIN_CLIMBING',
+    'SAILING',
+    'SURFING',
+    'WATER_SPORTS_GEAR',
+    'BICYCLE',
+    'FITNESS_ROOM',
+    'ICE_SKATING',
+    'MOUNTAINEERING',
+    'SCUBA_OR_SNORKELING',
+    'SWIMMING',
+    'WHITEWATER_RAFTING',
+    'BOAT',
+    'GOLF',
+    'JET_SKIING',
+    'PARAGLIDING',
+    'SKIING',
+    'TENNIS',
+    'WIND_SURFING',
+    'CYCLING',
+    'KAYAK_CANOE',
+    'PARASAILING',
+    'SKIING_WATER',
+    'TRAMPOLINE',
+    'CROSS_COUNTRY_SKIING',
+    'HIKING',
+    'KAYAKING',
+    'RAFTING',
+    'SNOW_SPORTS_GEAR',
+    'TUBING_WATER',
+    'HORSE_RIDING',
+    'MOUNTAIN_BIKING',
+    'ROLLER_BLADING',
+    'SNOWBOARDING',
+    'WATER_SPORTS',
+    'ADULTS_ONLY',
+    'EVENTS_ALLOWED',
+    'SMOKING_NOT_ALLOWED',
+    'CAR_NECESSARY',
+    'INFANTS_NOT_ALLOWED',
+    'DISABLED_ACCESSIBLE',
+    'CAR_RECOMMENDED',
+    'LONG_TERM_RENTERS',
+    'WHEELCHAIR_YES',
+    'CAR_NOT_NECESSARY',
+    'MINIMUM_AGE_LIMIT',
+    'WHEELCHAIR_NO',
+    'CHILDREN_NOT_ALLOWED',
+    'SENIOR_ADULTS_ONLY',
+    'CHILDREN_WELCOME',
+    'SMOKING_ALLOWED',
+    'EQUESTRIAN_EVENTS',
+]
+
+export const food_type: ICheckboxSelection[] = [
+    {
+        name: 'Food Type',
+        value: ['Vegetarian', 'Non-Vegetarian food', 'Halal Food'],
+    },
+]
+
+export const allowedRules: ICheckboxSelection[] = [
+    { name: 'Guest Profile', value: ['Unmarried couples allowed'] },
+    {
+        name: 'ID Proof Related',
+        value: [
+            'Passport, Aadhar and Driving License are accepted as ID proof(s)',
+            'Local ids are allowed',
+        ],
+    },
+    {
+        name: 'Food Arrangement',
+        value: [
+            'Non veg food is allowed',
+            'Outside food is allowed',
+            'Food Delivery is available',
+            'Food Delivery available from Zomato, Swiggy, Local restaurants, Local delivery apps, Talabat, Careem, Noon and UberEats',
+        ],
+    },
+    {
+        name: 'Smoking/Alcohol consumption Rules',
+        value: [
+            'Smoking within the premises is allowed',
+            'There are no restrictions on alcohol consumption.',
+        ],
+    },
+    {
+        name: 'Guest Profile (Hourly)',
+        value: ['Unmarried couples are allowed in hourly stay rooms'],
+    },
+]
+
+export const notAllowedRules: ICheckboxSelection[] = [
+    {
+        name: 'Restrictions',
+        value: [
+            'Guests below 18 years of age are not allowed at the property.',
+            'Pets are not allowed.',
+        ],
+    },
+    {
+        name: 'Pet(s) Related',
+        value: [
+            'Pets are not allowed.',
+            'There are no pets living on the property',
+        ],
+    },
+    {
+        name: 'Property Accessibility',
+        value: [
+            'This property is not accessible to guests who use a wheelchair. Please make arrangements accordingly.',
+        ],
+    },
+    {
+        name: 'Other Rules',
+        value: [
+            'Does not allow private parties or events',
+            'Guests are requested not to invite outside visitors in the room during their stay.',
+        ],
+    },
+    {
+        name: 'Child & Extra Bed Policy',
+        value: [
+            'No extra bed will be provided to accommodate any child included in the booking.',
+            'No extra bed will be provided to accommodate any additional guest included in the booking.',
+        ],
+    },
+]
+
+export const propertyPolicies: ICheckboxSelection[] = [
+    {
+        name: 'Property Policy',
+        value: ['Property Policy 1', 'Property Policy 2', 'Property Policy 3'],
+    },
+]
